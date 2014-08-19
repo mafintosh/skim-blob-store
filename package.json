@@ -9,8 +9,7 @@
     "pump": "^0.3.5"
   },
   "devDependencies": {
-    "abstract-blob-store": "^2.0.1",
-    "fs-blob-store": "^3.0.2",
+    "abstract-blob-store": "^2.1.0",
     "tape": "^2.14.0"
   },
   "scripts": {
