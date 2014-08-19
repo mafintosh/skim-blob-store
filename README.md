@@ -6,6 +6,8 @@ Blob store that will read from a remote blob store and cache it to a local one.
 npm install skim-blob-store
 ```
 
+[![build status](http://img.shields.io/travis/mafintosh/skim-blob-store.svg?style=flat)](http://travis-ci.org/mafintosh/skim-blob-store)
+
 ## Usage
 
 ``` js
