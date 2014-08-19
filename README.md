@@ -15,7 +15,7 @@ var skim = require('skim-blob-store')
 
 var blobs = skim(localBlobStore, remoteBlobStore)
 
-blobs.createReadStream({key: 'some-key', name: 'some blbo name'})
+blobs.createReadStream({key: 'some-key'})
   .pipe(process.stdout)
 ```
 
