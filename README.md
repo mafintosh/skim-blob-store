@@ -8,6 +8,8 @@ npm install skim-blob-store
 
 [![build status](http://img.shields.io/travis/mafintosh/skim-blob-store.svg?style=flat)](http://travis-ci.org/mafintosh/skim-blob-store)
 
+[![blob-store-compatible](https://raw.githubusercontent.com/maxogden/abstract-blob-store/master/badge.png)](https://github.com/maxogden/abstract-blob-store)
+
 ## Usage
 
 ``` js
