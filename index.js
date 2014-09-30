@@ -2,6 +2,8 @@ var pump = require('pump')
 var duplexify = require('duplexify')
 var debug = require('debug')('skim-blob-store')
 
+var noop = function() {}
+
 var Skim = function(backend, remote) {
   if (!(this instanceof Skim)) return new Skim(backend, remote)
   this.backend = backend
@@ -37,6 +39,17 @@ Skim.prototype.createReadStream = function(obj) {
 
 Skim.prototype.createWriteStream = function() {
   return this.backend.createWriteStream.apply(this.backend, arguments)
+}
+
+Skim.prototype.remove = function(obj, cb) {
+  if (!cb) cb = noop
+  var backend = this.backend
+  var remote = this.remote
+
+  backend.remove(obj, function(err) {
+    if (err) return cb(err)
+    remote.remove(obj, cb)
+  })
 }
 
 Skim.prototype.exists = function(obj, cb) {
